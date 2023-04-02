@@ -44,7 +44,7 @@ In your templates, use the following placeholders to indicate which 1Password va
 ```
 {{Vault Name.Item Name.Field Name}}
 {{Item Name.Field Name}}
-{{Fiel dName}}
+{{Field Name}}
 ```
 
 :warning: Warning: Using a period (.) in the template field names, item names, or vault names can lead to unexpected
