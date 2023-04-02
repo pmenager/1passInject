@@ -36,7 +36,7 @@ items:
     type: file
     item: ssl_certificate_document
     destination: configs/ssl_certificate.pem
-    vault: Production
+    vault: Dev env
 ```
 
 In your templates, use the following placeholders to indicate which 1Password values should be injected:
