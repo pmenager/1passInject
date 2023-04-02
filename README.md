@@ -4,6 +4,14 @@
 or templates. The script supports both direct file download and processing of templates with embedded placeholders for
 1Password values.
 
+### Use cases
+
+1PassInject is designed to streamline the process of managing development secrets and sharing them between team members
+using 1Password. This script is particularly useful for handling frequently updated passwords, quickly setting up
+development environments, and ensuring that secrets remain synchronized across the team. By using 1Password templates,
+which can be versioned, developers can maintain a consistent and up-to-date configuration across their local
+environments.
+
 :warning: **Important**: This tool is designed for non-production or non-critical secrets, such as development secrets
 and files. It is not recommended to store plain-text secrets on a computer, as it may expose sensitive information. Use
 this tool with caution and always follow best security practices.
@@ -30,12 +38,14 @@ items:
     type: template
     source: templates/database_config_template.yml
     destination: configs/database_config.yml
+    account: something.1password.com
     vault: Development
     item: database_credentials
   - name: ssl_certificate
     type: file
     item: ssl_certificate_document
     destination: configs/ssl_certificate.pem
+    account: something.1password.com
     vault: Dev env
 ```
 
